@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { H2, H2Subtitle, H3, P, PStrong } from 'libs/commonStyles';
 import { secondary, textDark, primary, secondaryContrast } from 'libs/colors';
-import featuredTripCreatorImage from 'assets/featured-trip-creator.png';
+import featuredTripCreatorImage from 'assets/featured-trip-creator.jpg';
 
 import ListsHandler from 'shared_components/ListsHandler';
 import api from 'libs/apiClient';
