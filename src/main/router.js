@@ -1,33 +1,36 @@
 import React from 'react';
 import { Switch } from 'react-router';
 import { Route } from 'react-router-dom';
+import asyncComponent from 'libs/asyncHOC';
 import withErrorBoundary from './middlewares/WithErrorBoundary';
-import Home from './../scenes/home/home';
-import EarnMoney from './../scenes/earn-money';
-import TokenSale from './../scenes/token-sale';
-import UserVerification from '../scenes/user-verification';
-import CookiePolicy from './../scenes/cookie-policy';
-import Account from './../scenes/account/account';
-import Sessions from './../scenes/sessions/sessions';
-import Results from './../scenes/results/results';
-import Trip from './../scenes/trip';
-import TripCreator from './../scenes/trip-creator';
-import TripOrganizer from './../scenes/trip-organizer';
-import TripShare from './../scenes/trip-share';
-import Users from './../scenes/users/users';
-import Services from './../scenes/services/services';
-import Registrations from './../scenes/registrations/registrations';
-import RecoverPassword from './../scenes/recover-password';
-import Notfound from './../styled_scenes/NotFound';
 import ScrollToTop from './middlewares/ScrollToTop';
-import ServiceUpsert from '../scenes/service-upsert';
-import Checkout from '../scenes/checkout';
-import BlogPost from '../scenes/blog';
-import PrivateRoute from './PrivateRoute';
-import OnlyPublicRoute from './OnlyPublicRoute';
 import withSegmentTracker from './middlewares/with_segment_tracker';
 
-const commonHOCs = comp => withErrorBoundary(withSegmentTracker(comp));
+const Home = './../scenes/home/home';
+const EarnMoney = './../scenes/earn-money';
+const TokenSale = './../scenes/token-sale';
+const UserVerification = '../scenes/user-verification';
+const CookiePolicy = './../scenes/cookie-policy';
+const Account = './../scenes/account/account';
+const Sessions = './../scenes/sessions/sessions';
+const Results = './../scenes/results/results';
+const Trip = './../scenes/trip';
+const TripCreator = './../scenes/trip-creator';
+const TripOrganizer = './../scenes/trip-organizer';
+const TripShare = './../scenes/trip-share';
+const Users = './../scenes/users/users';
+const Services = './../scenes/services/services';
+const Registrations = './../scenes/registrations/registrations';
+const RecoverPassword = './../scenes/recover-password';
+const Notfound = './../styled_scenes/NotFound';
+const ServiceUpsert = '../scenes/service-upsert';
+const Checkout = '../scenes/checkout';
+const BlogPost = '../scenes/blog';
+const PrivateRoute = './PrivateRoute';
+const OnlyPublicRoute = './OnlyPublicRoute';
+
+const commonHOCs = comp =>
+  withErrorBoundary(withSegmentTracker(asyncComponent(() => import(comp))));
 
 export default (
   <ScrollToTop>
