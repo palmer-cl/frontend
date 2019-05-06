@@ -5,32 +5,32 @@ import asyncComponent from 'libs/asyncHOC';
 import withErrorBoundary from './middlewares/WithErrorBoundary';
 import ScrollToTop from './middlewares/ScrollToTop';
 import withSegmentTracker from './middlewares/with_segment_tracker';
+import PrivateRoute from './PrivateRoute';
+import OnlyPublicRoute from './OnlyPublicRoute';
+import Notfound from './../styled_scenes/NotFound';
 
-const Home = './../scenes/home/home';
-const EarnMoney = './../scenes/earn-money';
-const TokenSale = './../scenes/token-sale';
-const UserVerification = '../scenes/user-verification';
-const CookiePolicy = './../scenes/cookie-policy';
-const Account = './../scenes/account/account';
-const Sessions = './../scenes/sessions/sessions';
-const Results = './../scenes/results/results';
-const Trip = './../scenes/trip';
-const TripCreator = './../scenes/trip-creator';
-const TripOrganizer = './../scenes/trip-organizer';
-const TripShare = './../scenes/trip-share';
-const Users = './../scenes/users/users';
-const Services = './../scenes/services/services';
-const Registrations = './../scenes/registrations/registrations';
-const RecoverPassword = './../scenes/recover-password';
-const Notfound = './../styled_scenes/NotFound';
-const ServiceUpsert = '../scenes/service-upsert';
-const Checkout = '../scenes/checkout';
-const BlogPost = '../scenes/blog';
-const PrivateRoute = './PrivateRoute';
-const OnlyPublicRoute = './OnlyPublicRoute';
+const Home = 'home/home';
+const EarnMoney = 'earn-money';
+const TokenSale = 'token-sale';
+const UserVerification = 'user-verification';
+const CookiePolicy = 'cookie-policy';
+const Account = 'account/account';
+const Sessions = 'sessions/sessions';
+const Results = 'results/results';
+const Trip = 'trip';
+const TripCreator = 'trip-creator';
+const TripOrganizer = 'trip-organizer';
+const TripShare = 'trip-share';
+const Users = 'users/users';
+const Services = 'services/services';
+const Registrations = 'registrations/registrations';
+const RecoverPassword = 'recover-password';
+const ServiceUpsert = 'service-upsert';
+const Checkout = 'checkout';
+const BlogPost = 'blog';
 
 const commonHOCs = comp =>
-  withErrorBoundary(withSegmentTracker(asyncComponent(() => import(comp))));
+  withErrorBoundary(withSegmentTracker(asyncComponent(() => import(`../scenes/${comp}`))));
 
 export default (
   <ScrollToTop>
