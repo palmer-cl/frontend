@@ -1,7 +1,8 @@
 import React from 'react';
 import { Switch } from 'react-router';
 import { Route } from 'react-router-dom';
-import asyncComponent from 'libs/asyncHOC';
+import Loadable from 'react-loadable';
+import ComponentLoader from './ComponentLoader';
 import withErrorBoundary from './middlewares/WithErrorBoundary';
 import ScrollToTop from './middlewares/ScrollToTop';
 import withSegmentTracker from './middlewares/with_segment_tracker';
@@ -30,7 +31,14 @@ const Checkout = 'checkout';
 const BlogPost = 'blog';
 
 const commonHOCs = comp =>
-  withErrorBoundary(withSegmentTracker(asyncComponent(() => import(`../scenes/${comp}`))));
+  withErrorBoundary(
+    withSegmentTracker(
+      Loadable({
+        loader: () => import(`../scenes/${comp}`),
+        loading: ComponentLoader,
+      }),
+    ),
+  );
 
 export default (
   <ScrollToTop>
