@@ -3,6 +3,7 @@
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: local('Nunito Regular'), local('Nunito-Regular'),
        url('/fonts/nunito-v10-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
        url('/fonts/nunito-v10-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
@@ -12,6 +13,7 @@
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: local('Nunito Bold'), local('Nunito-Bold'),
        url('/fonts/nunito-v10-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
        url('/fonts/nunito-v10-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
@@ -22,6 +24,7 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 300;
+  font-display: swap;
   src: local('Roboto Light'), local('Roboto-Light'),
        url('/fonts/roboto-v19-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
        url('/fonts/roboto-v19-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
@@ -31,6 +34,7 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: local('Roboto'), local('Roboto-Regular'),
        url('/fonts/roboto-v19-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
        url('/fonts/roboto-v19-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
@@ -40,6 +44,7 @@
   font-family: 'Roboto';
   font-style: italic;
   font-weight: 400;
+  font-display: swap;
   src: local('Roboto Italic'), local('Roboto-Italic'),
        url('/fonts/roboto-v19-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
        url('/fonts/roboto-v19-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
@@ -49,6 +54,7 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
+  font-display: swap;
   src: local('Roboto Medium'), local('Roboto-Medium'),
        url('/fonts/roboto-v19-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
        url('/fonts/roboto-v19-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
@@ -58,6 +64,7 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: local('Roboto Bold'), local('Roboto-Bold'),
        url('/fonts/roboto-v19-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
        url('/fonts/roboto-v19-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
@@ -73,7 +80,6 @@
 body {
   color: #262626;
   font-family: 'Nunito', sans-serif;
-  font-display: swap;
   font-weight: 400;
   font-size: 16px;
   word-wrap: break-word;
@@ -90,7 +96,6 @@ h4,
 h5,
 h6 {
   font-family: 'Roboto', sans-serif;
-  font-display: swap;
   font-weight: 700;
   margin: 0;
 }

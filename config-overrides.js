@@ -36,10 +36,10 @@ module.exports = function override(config, env) {
 
     config.plugins.push(
       new DuplicatePackageCheckerPlugin(),
-      //new DeadCodePlugin({
-      //  patterns: ['src/**/*.(js|jsx|css)'],
-      //  exclude: ['**/*.(stories|spec).(js|jsx)'],
-      //}),
+      new DeadCodePlugin({
+        patterns: ['src/**/*.(js|jsx|css)'],
+        exclude: ['**/*.(stories|spec).(js|jsx)'],
+      }),
     );
   }
 
